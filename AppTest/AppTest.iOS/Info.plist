@@ -34,10 +34,16 @@
 	<string>AppTest</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
+  <key>UIBackgroundModes</key>
+  <array>
+    <string>remote-notification</string>
+  </array>
+  <key>FirebaseAppDelegateProxyEnabled</key>
+  <false/>
   <key>UILaunchStoryboardName</key>
   <string>LaunchScreen</string>
   <key>CFBundleName</key>
-  <string>DemoCamera</string>
+  <string>AppTest</string>
 
   <key>NSCameraUsageDescription</key>
   <string>This app needs access to the camera to take photos.</string>

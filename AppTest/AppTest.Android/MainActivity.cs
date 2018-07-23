@@ -8,6 +8,8 @@ using Android.Widget;
 using Android.OS;
 using Plugin.Media;
 using Plugin.CurrentActivity;
+using Plugin.FirebasePushNotification;
+using Android.Content;
 
 namespace AppTest.Droid
 {
@@ -27,11 +29,19 @@ namespace AppTest.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
+
+            FirebasePushNotificationManager.ProcessIntent(this, Intent);
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)
         {
             Plugin.Permissions.PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        protected override void OnNewIntent(Intent intent)
+        {
+            base.OnNewIntent(intent);
+            FirebasePushNotificationManager.ProcessIntent(this, intent);
         }
     }
 }

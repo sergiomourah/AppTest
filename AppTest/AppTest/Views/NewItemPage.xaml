@@ -2,18 +2,31 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="AppTest.Views.NewItemPage"
-		     Title="New Item">
+		     Title="Adicionar Item">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Save" Clicked="Save_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
-            <Label Text="Produto" FontSize="Medium" />
-            <Editor Text="{Binding Pedido.Produto}" FontSize="Small" Margin="0" />
-            <Label Text="Cliente" FontSize="Medium" />
-            <Editor Text="{Binding Pedido.Cliente}" FontSize="Small" Margin="0" />
-            <Label Text="Valor" FontSize="Medium" />
-            <Editor Text="{Binding Pedido.Valor}" FontSize="Small" Margin="0" />
+            <!--Produto-->
+            <Entry x:Name="Produto"
+             Text="{Binding Pedido.Produto}"
+             Placeholder="Produto" 
+             Margin="0"
+             FontSize="20"/>
+            <!--Cliente-->
+            <Entry x:Name="Cliente"
+             Text="{Binding Pedido.Cliente}"
+             Placeholder="Cliente" 
+             Margin="0"
+             FontSize="20"/>
+            <!--Valor-->
+            <Entry x:Name="Valor"
+             Text="{Binding Pedido.Valor}"
+             Placeholder="Valor" 
+             Margin="0"
+             FontSize="20"/>
+            
             <Button Text="Tirar Foto" Clicked="TirarFoto" FontSize="20" />
 
             <Button Text="Escolher Foto" Clicked="EscolherFoto" FontSize="20" />

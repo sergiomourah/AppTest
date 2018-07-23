@@ -23,7 +23,7 @@ namespace AppTest.ViewModels
 
         public ItemsViewModel()
         {
-            Title = "Pedidos";
+            Title = "Consulta Pedidos";
             _pedidos = new ObservableCollection<Pedido>();
             LoadItemsCommand = new Command(() => ExecuteLoadItemsCommand());
 

@@ -2,6 +2,8 @@ Firebase
 FormsViewGroup
 Newtonsoft.Json
 Plugin.CurrentActivity
+Plugin.FirebasePushNotification.Abstractions
+Plugin.FirebasePushNotification
 Plugin.Media
 Plugin.Permissions
 System.Reactive.Core
@@ -28,10 +30,15 @@ Xamarin.Android.Support.v7.MediaRouter
 Xamarin.Android.Support.v7.Palette
 Xamarin.Android.Support.v7.RecyclerView
 Xamarin.Android.Support.Vector.Drawable
+Xamarin.Firebase.Common
+Xamarin.Firebase.Iid
+Xamarin.Firebase.Messaging
 Xamarin.Forms.Core
 Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
+Xamarin.GooglePlayServices.Basement
+Xamarin.GooglePlayServices.Tasks
 System.Threading.Tasks
 System.Diagnostics.Debug
 System.Collections

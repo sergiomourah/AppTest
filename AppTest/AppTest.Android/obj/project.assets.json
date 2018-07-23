@@ -104,6 +104,22 @@
           "lib/monoandroid44/Plugin.CurrentActivity.dll": {}
         }
       },
+      "Plugin.FirebasePushNotification/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.v4": "26.0.2",
+          "Xamarin.Build.Download": "0.4.7",
+          "Xamarin.Firebase.Messaging": "[60.1142.0]"
+        },
+        "compile": {
+          "lib/MonoAndroid80/Plugin.FirebasePushNotification.Abstractions.dll": {},
+          "lib/MonoAndroid80/Plugin.FirebasePushNotification.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid80/Plugin.FirebasePushNotification.Abstractions.dll": {},
+          "lib/MonoAndroid80/Plugin.FirebasePushNotification.dll": {}
+        }
+      },
       "Plugin.Permissions/3.0.0.12": {
         "type": "package",
         "dependencies": {
@@ -990,6 +1006,62 @@
           "build/MonoAndroid81/Xamarin.Android.Support.Vector.Drawable.targets": {}
         }
       },
+      "Xamarin.Build.Download/0.4.7": {
+        "type": "package",
+        "build": {
+          "build/Xamarin.Build.Download.props": {},
+          "build/Xamarin.Build.Download.targets": {}
+        }
+      },
+      "Xamarin.Firebase.Common/60.1142.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.0]",
+          "Xamarin.GooglePlayServices.Tasks": "[60.1142.0]"
+        },
+        "compile": {
+          "lib/MonoAndroid80/Xamarin.Firebase.Common.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid80/Xamarin.Firebase.Common.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid80/Xamarin.Firebase.Common.targets": {}
+        }
+      },
+      "Xamarin.Firebase.Iid/60.1142.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Firebase.Common": "[60.1142.0]",
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.0]"
+        },
+        "compile": {
+          "lib/MonoAndroid80/Xamarin.Firebase.Iid.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid80/Xamarin.Firebase.Iid.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid80/Xamarin.Firebase.Iid.targets": {}
+        }
+      },
+      "Xamarin.Firebase.Messaging/60.1142.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Firebase.Common": "[60.1142.0]",
+          "Xamarin.Firebase.Iid": "[60.1142.0]",
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.0]"
+        },
+        "compile": {
+          "lib/MonoAndroid80/Xamarin.Firebase.Messaging.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid80/Xamarin.Firebase.Messaging.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid80/Xamarin.Firebase.Messaging.targets": {}
+        }
+      },
       "Xamarin.Forms/3.0.0.446417": {
         "type": "package",
         "dependencies": {
@@ -1016,6 +1088,41 @@
         "build": {
           "build/netstandard2.0/Xamarin.Forms.props": {},
           "build/netstandard2.0/Xamarin.Forms.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Basement/60.1142.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.Compat": "26.0.2",
+          "Xamarin.Android.Support.Core.UI": "26.0.2",
+          "Xamarin.Android.Support.Core.Utils": "26.0.2",
+          "Xamarin.Android.Support.Fragment": "26.0.2",
+          "Xamarin.Android.Support.Media.Compat": "26.0.2",
+          "Xamarin.Build.Download": "0.4.7"
+        },
+        "compile": {
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Basement.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Basement.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid80/Xamarin.GooglePlayServices.Basement.targets": {}
+        }
+      },
+      "Xamarin.GooglePlayServices.Tasks/60.1142.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.GooglePlayServices.Basement": "[60.1142.0]"
+        },
+        "compile": {
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Tasks.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid80/Xamarin.GooglePlayServices.Tasks.dll": {}
+        },
+        "build": {
+          "build/MonoAndroid80/Xamarin.GooglePlayServices.Tasks.targets": {}
         }
       }
     }
@@ -1125,6 +1232,32 @@
         "plugin.currentactivity.2.1.0.2.nupkg.sha512",
         "plugin.currentactivity.nuspec",
         "readme.txt"
+      ]
+    },
+    "Plugin.FirebasePushNotification/2.3.0": {
+      "sha512": "Y/lq1imeqXafgYqqopPMBeaklS3/FL44rPX04hHac4A8CftXrExp3OONSBezt4UgsLjL+6SEOtKA6C5Flx6IAA==",
+      "type": "package",
+      "path": "plugin.firebasepushnotification/2.3.0",
+      "files": [
+        "lib/MonoAndroid80/Plugin.FirebasePushNotification.Abstractions.dll",
+        "lib/MonoAndroid80/Plugin.FirebasePushNotification.Abstractions.pdb",
+        "lib/MonoAndroid80/Plugin.FirebasePushNotification.Abstractions.xml",
+        "lib/MonoAndroid80/Plugin.FirebasePushNotification.XML",
+        "lib/MonoAndroid80/Plugin.FirebasePushNotification.dll",
+        "lib/MonoAndroid80/Plugin.FirebasePushNotification.pdb",
+        "lib/Xamarin.iOS10/Plugin.FirebasePushNotification.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.FirebasePushNotification.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.FirebasePushNotification.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.FirebasePushNotification.XML",
+        "lib/Xamarin.iOS10/Plugin.FirebasePushNotification.dll",
+        "lib/netstandard1.0/Plugin.FirebasePushNotification.Abstractions.dll",
+        "lib/netstandard1.0/Plugin.FirebasePushNotification.Abstractions.pdb",
+        "lib/netstandard1.0/Plugin.FirebasePushNotification.Abstractions.xml",
+        "lib/netstandard1.0/Plugin.FirebasePushNotification.deps.json",
+        "lib/netstandard1.0/Plugin.FirebasePushNotification.dll",
+        "lib/netstandard1.0/Plugin.FirebasePushNotification.xml",
+        "plugin.firebasepushnotification.2.3.0.nupkg.sha512",
+        "plugin.firebasepushnotification.nuspec"
       ]
     },
     "Plugin.Permissions/3.0.0.12": {
@@ -4261,6 +4394,55 @@
         "xamarin.android.support.vector.drawable.nuspec"
       ]
     },
+    "Xamarin.Build.Download/0.4.7": {
+      "sha512": "bn7kFhBx0olu+TNh3GhGDD3fELAjlIFMQkyJuQAWpTIk14Ug9NHwHlHjOryN4BbBOaAAX3b5MqhU+hSfDXXguA==",
+      "type": "package",
+      "path": "xamarin.build.download/0.4.7",
+      "files": [
+        "THIRD-PARTY-NOTICES.txt",
+        "build/Mono.Cecil.dll",
+        "build/Newtonsoft.Json.dll",
+        "build/System.Net.Http.Formatting.dll",
+        "build/Xamarin.Build.Download.dll",
+        "build/Xamarin.Build.Download.props",
+        "build/Xamarin.Build.Download.targets",
+        "xamarin.build.download.0.4.7.nupkg.sha512",
+        "xamarin.build.download.nuspec"
+      ]
+    },
+    "Xamarin.Firebase.Common/60.1142.0": {
+      "sha512": "PJwLYkm4jdYnJ8hWdqBqvPfUZw4QYKHLx+4nfVSdXLWuRSpL2nZWRf/HSpUGqladUjefvk5giFoAUVF10uP2Iw==",
+      "type": "package",
+      "path": "xamarin.firebase.common/60.1142.0",
+      "files": [
+        "build/MonoAndroid80/Xamarin.Firebase.Common.targets",
+        "lib/MonoAndroid80/Xamarin.Firebase.Common.dll",
+        "xamarin.firebase.common.60.1142.0.nupkg.sha512",
+        "xamarin.firebase.common.nuspec"
+      ]
+    },
+    "Xamarin.Firebase.Iid/60.1142.0": {
+      "sha512": "212g5/+XGc2FMZnhCWUGX+5KOWe2sAVmwQzZ+NKcXPbQ50hnjkuX4izinLTrxUsipOQA/dO36Xlp6Ad05azsAQ==",
+      "type": "package",
+      "path": "xamarin.firebase.iid/60.1142.0",
+      "files": [
+        "build/MonoAndroid80/Xamarin.Firebase.Iid.targets",
+        "lib/MonoAndroid80/Xamarin.Firebase.Iid.dll",
+        "xamarin.firebase.iid.60.1142.0.nupkg.sha512",
+        "xamarin.firebase.iid.nuspec"
+      ]
+    },
+    "Xamarin.Firebase.Messaging/60.1142.0": {
+      "sha512": "jVP6WrljRMOlXe3OL5jwQSEj9Lr+l3TE20uV7HUJNIgHfdROPqUlcPWqhTegyBQRVBSZ9vli/E0OoV15JhRFHQ==",
+      "type": "package",
+      "path": "xamarin.firebase.messaging/60.1142.0",
+      "files": [
+        "build/MonoAndroid80/Xamarin.Firebase.Messaging.targets",
+        "lib/MonoAndroid80/Xamarin.Firebase.Messaging.dll",
+        "xamarin.firebase.messaging.60.1142.0.nupkg.sha512",
+        "xamarin.firebase.messaging.nuspec"
+      ]
+    },
     "Xamarin.Forms/3.0.0.446417": {
       "sha512": "9Q6dING0FdSiOlsWUdNUzNiZgEljZ7rez5rn3+77+h0hfaFjSyV0tZQ1y2u2pXzRqgWNjDH3rrcCSoKgkMIxzA==",
       "type": "package",
@@ -4397,11 +4579,35 @@
         "xamarin.forms.3.0.0.446417.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
+    },
+    "Xamarin.GooglePlayServices.Basement/60.1142.0": {
+      "sha512": "7fcV5SsTVyuPKzxbOTJ6jJ7CXVMdumaINx3G5RzA+nYvNC3lqWB2G0Lqa1T2y3YsLFf3lu9uANrsmf41USWQGQ==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.basement/60.1142.0",
+      "files": [
+        "build/MonoAndroid80/Xamarin.GooglePlayServices.Basement.targets",
+        "build/MonoAndroid80/Xamarin.GooglePlayServices.Tasks.dll",
+        "lib/MonoAndroid80/Xamarin.GooglePlayServices.Basement.dll",
+        "xamarin.googleplayservices.basement.60.1142.0.nupkg.sha512",
+        "xamarin.googleplayservices.basement.nuspec"
+      ]
+    },
+    "Xamarin.GooglePlayServices.Tasks/60.1142.0": {
+      "sha512": "H6ePP4zGVcg/FiWpV4ydiQApdxUNs48pa/0Tlye2JMhv37WTyupgIqrAgAt0rCw/d9vkzkZ6A1lHbKdpT+iwmQ==",
+      "type": "package",
+      "path": "xamarin.googleplayservices.tasks/60.1142.0",
+      "files": [
+        "build/MonoAndroid80/Xamarin.GooglePlayServices.Tasks.targets",
+        "lib/MonoAndroid80/Xamarin.GooglePlayServices.Tasks.dll",
+        "xamarin.googleplayservices.tasks.60.1142.0.nupkg.sha512",
+        "xamarin.googleplayservices.tasks.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v8.1": [
       "FirebaseDatabase.net >= 3.3.3",
+      "Plugin.FirebasePushNotification >= 2.3.0",
       "Xam.Plugin.Media >= 4.0.1.1",
       "Xamarin.Android.Support.Design >= 27.0.2",
       "Xamarin.Android.Support.v4 >= 27.0.2",
@@ -4447,6 +4653,10 @@
           "FirebaseDatabase.net": {
             "target": "Package",
             "version": "[3.3.3, )"
+          },
+          "Plugin.FirebasePushNotification": {
+            "target": "Package",
+            "version": "[2.3.0, )"
           },
           "Xam.Plugin.Media": {
             "target": "Package",
