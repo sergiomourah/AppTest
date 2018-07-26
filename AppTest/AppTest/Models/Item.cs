@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using Xamarin.Forms;
 
 namespace AppTest.Models
 {
@@ -15,5 +17,22 @@ namespace AppTest.Models
         public int IdVendedor { get; set; }
 
         public string img { get; set; }
+
+        public ImageSource Imagem
+        {
+            get
+            {            
+                if (!string.IsNullOrEmpty(img))
+                {
+                    return ImageSource.FromStream(() =>
+                    {
+                        byte[] byteArray = Convert.FromBase64String(img);
+                        return new MemoryStream(byteArray);
+                    });
+                }
+                else return null;
+            }
+
+        }
     }
 }

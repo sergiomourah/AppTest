@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"   
+             x:Class="AppTest.Views.LoginView">
+    <ContentPage.Content>
+        <Grid>
+            <Grid 
+                RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="6*" />
+                    <RowDefinition Height="4*" />
+                </Grid.RowDefinitions>
+                <!-- Top image -->
+                <ffimageloading:CachedImage 
+                    Grid.Row="0"
+                    Aspect="AspectFill">
+                    <ffimageloading:CachedImage.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <On Platform="Android, iOS" Value="img_header_background_1" />
+                        </OnPlatform>
+                    </ffimageloading:CachedImage.Source>
+                </ffimageloading:CachedImage>
+                <StackLayout 
+                     Spacing="20" 
+                     VerticalOptions="Center" 
+                     HorizontalOptions="Center">
+                    <Label Text="Comece uma nova experiência" 
+                     TextColor="White" 
+                     FontSize="20"/>
+                    <Entry x:Name="txtLogin" 
+                     Placeholder="Email" 
+                     BackgroundColor="#c4c1c7b0"
+                     FontSize="20"/>
+                    <Entry x:Name="txtSenha" 
+                     Placeholder="Senha" 
+                     FontSize="20" 
+                     BackgroundColor="#c4c1c7b0"
+                     PlaceholderColor="White"   
+                     IsPassword="true"/>
+                    <Button x:Name="btnLogin" 
+                      Text="CONTINUAR" 
+                      TextColor="White" 
+                      BackgroundColor="Red" 
+                      FontSize="20" />
+                    <Label x:Name="lblMsg" 
+                     FontSize="20" 
+                     TextColor="Red" 
+                     FontAttributes="Bold"/>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

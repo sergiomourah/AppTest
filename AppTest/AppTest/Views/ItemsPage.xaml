@@ -28,6 +28,10 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Padding="10">
+                        <Image Source="{Binding Imagem}" 
+                            x:Name="MinhaImagem" 
+                            WidthRequest="60"
+                            HeightRequest="80"/>        
                                 <Label Text="{Binding Produto}" 
                        LineBreakMode="NoWrap" 
                        Style="{DynamicResource ListItemTextStyle}" 

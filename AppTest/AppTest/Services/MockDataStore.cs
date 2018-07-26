@@ -57,7 +57,8 @@ namespace AppTest.Services
                 Id = key,
                 Cliente = pedido.Cliente,
                 Produto = pedido.Produto,
-                Valor = pedido.Valor
+                Valor = pedido.Valor,
+                img = pedido.img
             });
         }
 

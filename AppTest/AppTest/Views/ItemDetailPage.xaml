@@ -10,5 +10,9 @@
         <Label Text="{Binding Pedido.Cliente}" FontSize="Small"/>
         <Label Text="Valor:" FontSize="Medium" />
         <Label Text="{Binding Pedido.Valor}" FontSize="Small"/>
+        <Image Source="{Binding Pedido.Imagem}" 
+               x:Name="MinhaImagem" 
+                WidthRequest="400"
+                HeightRequest="220"/>
     </StackLayout>
 </ContentPage>

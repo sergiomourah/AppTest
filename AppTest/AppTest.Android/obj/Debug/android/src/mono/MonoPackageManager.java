@@ -107,6 +107,13 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "AppTest.Android.dll" comes first in this list. */
 		"AppTest.Android.dll",
+		"FFImageLoading.dll",
+		"FFImageLoading.Forms.dll",
+		"FFImageLoading.Forms.Platform.dll",
+		"FFImageLoading.Platform.dll",
+		"FFImageLoading.Svg.Forms.dll",
+		"FFImageLoading.Svg.Platform.dll",
+		"FFImageLoading.Transformations.dll",
 		"Firebase.dll",
 		"FormsViewGroup.dll",
 		"Newtonsoft.Json.dll",
@@ -115,6 +122,7 @@ class MonoPackageManager_Resources {
 		"Plugin.FirebasePushNotification.dll",
 		"Plugin.Media.dll",
 		"Plugin.Permissions.dll",
+		"SkiaSharp.dll",
 		"System.Reactive.Core.dll",
 		"System.Reactive.Interfaces.dll",
 		"System.Reactive.Linq.dll",

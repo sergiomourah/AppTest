@@ -16,7 +16,16 @@ C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.iOS\bin\iPhoneSimulator\Debu
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.iOS\bin\iPhoneSimulator\Debug\System.Security.Cryptography.Algorithms.dll
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.iOS\bin\iPhoneSimulator\Debug\System.Security.Cryptography.Encoding.dll
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.iOS\bin\iPhoneSimulator\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.iOS\bin\iPhoneSimulator\Debug\WebP.Touch.dll
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.iOS\bin\iPhoneSimulator\Debug\Plugin.Media.dll
+C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.iOS\bin\iPhoneSimulator\Debug\FFImageLoading.Platform.dll
+C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.iOS\bin\iPhoneSimulator\Debug\FFImageLoading.Platform.pdb
+C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.iOS\bin\iPhoneSimulator\Debug\FFImageLoading.dll
+C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.iOS\bin\iPhoneSimulator\Debug\FFImageLoading.pdb
+C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.iOS\bin\iPhoneSimulator\Debug\FFImageLoading.Forms.Platform.dll
+C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.iOS\bin\iPhoneSimulator\Debug\FFImageLoading.Forms.Platform.pdb
+C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.iOS\bin\iPhoneSimulator\Debug\FFImageLoading.Forms.dll
+C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.iOS\bin\iPhoneSimulator\Debug\FFImageLoading.Forms.pdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.iOS\bin\iPhoneSimulator\Debug\Firebase.Analytics.dll
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.iOS\bin\iPhoneSimulator\Debug\Firebase.CloudMessaging.dll
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.iOS\bin\iPhoneSimulator\Debug\Firebase.Core.dll

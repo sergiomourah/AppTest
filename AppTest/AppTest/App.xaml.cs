@@ -14,9 +14,7 @@ namespace AppTest
 		{
 			InitializeComponent();
 
-
-			MainPage = new MainPage();
-
+            MainPage = new MainPage();
             CrossFirebasePushNotification.Current.OnTokenRefresh += (s, p) =>
             {
                 System.Diagnostics.Debug.WriteLine($"TOKEN : {p.Token}");

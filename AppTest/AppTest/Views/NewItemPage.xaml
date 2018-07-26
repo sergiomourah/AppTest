@@ -27,9 +27,9 @@
              Margin="0"
              FontSize="20"/>
             
-            <Button Text="Tirar Foto" Clicked="TirarFoto" FontSize="20" />
+            <Button Text="Tirar Foto" Clicked="TirarFoto" FontSize="20" StyleClass="Info" />
 
-            <Button Text="Escolher Foto" Clicked="EscolherFoto" FontSize="20" />
+            <Button Text="Escolher Foto" Clicked="EscolherFoto" FontSize="20" StyleClass="Info"/>
 
             <Image x:Name="MinhaImagem" 
                 WidthRequest="400"

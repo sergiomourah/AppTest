@@ -3707,6 +3707,9 @@ namespace AppTest.Droid
 			// aapt resource value: 2131296516
 			public static int ic_vol_type_tv_light = 2131296516;
 			
+			// aapt resource value: 0
+			public static int img_header_background_1 = 0;
+			
 			// aapt resource value: 2131296517
 			public static int mr_button_connected_dark = 2131296517;
 			

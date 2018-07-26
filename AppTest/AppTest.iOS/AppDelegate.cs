@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using FFImageLoading.Forms.Platform;
 using Foundation;
 using Plugin.FirebasePushNotification;
 using UIKit;
@@ -24,6 +24,7 @@ namespace AppTest.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            CachedImageRenderer.Init();
             LoadApplication(new App());
             FirebasePushNotificationManager.Initialize(options, true);
             return base.FinishedLaunching(app, options);

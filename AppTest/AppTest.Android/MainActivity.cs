@@ -10,6 +10,7 @@ using Plugin.Media;
 using Plugin.CurrentActivity;
 using Plugin.FirebasePushNotification;
 using Android.Content;
+using FFImageLoading.Forms.Droid;
 
 namespace AppTest.Droid
 {
@@ -22,12 +23,14 @@ namespace AppTest.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
+            
 
             await CrossMedia.Current.Initialize();
 
             CrossCurrentActivity.Current.Init(this, bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            CachedImageRenderer.Init(true);
             LoadApplication(new App());
 
             FirebasePushNotificationManager.ProcessIntent(this, Intent);
