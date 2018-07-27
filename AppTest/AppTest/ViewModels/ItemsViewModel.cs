@@ -20,6 +20,7 @@ namespace AppTest.ViewModels
             set { _pedidos = value; OnPropertyChanged(); }
         }
         public Command LoadItemsCommand { get; set; }
+        public Command DialogSearchItem { get; set; }
 
         public ItemsViewModel()
         {

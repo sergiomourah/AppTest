@@ -42,6 +42,11 @@ namespace AppTest.Views
             await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
         }
 
+        async void SearchItem_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new DialogSearchItemPage()));
+        }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();

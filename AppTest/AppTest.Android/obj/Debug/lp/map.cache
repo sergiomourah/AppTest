@@ -2,6 +2,9 @@ FFImageLoading
 FFImageLoading.Forms
 FFImageLoading.Forms.Platform
 FFImageLoading.Platform
+FFImageLoading.Svg.Forms
+FFImageLoading.Svg.Platform
+FFImageLoading.Transformations
 Firebase
 FormsViewGroup
 Newtonsoft.Json
@@ -10,6 +13,7 @@ Plugin.FirebasePushNotification.Abstractions
 Plugin.FirebasePushNotification
 Plugin.Media
 Plugin.Permissions
+SkiaSharp
 System.Reactive.Core
 System.Reactive.Interfaces
 System.Reactive.Linq
@@ -55,7 +59,3 @@ System.Collections.Concurrent
 System.ComponentModel
 System.Runtime.InteropServices.WindowsRuntime
 netstandard
-FFImageLoading.Svg.Forms
-FFImageLoading.Svg.Platform
-FFImageLoading.Transformations
-SkiaSharp

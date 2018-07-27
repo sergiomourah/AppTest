@@ -12,6 +12,13 @@
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
+        <ToolbarItem Text="Pesquisar" Clicked="SearchItem_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="add.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
@@ -27,23 +34,26 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Padding="10">
-                        <Image Source="{Binding Imagem}" 
+                            <StackLayout Orientation="Horizontal" Padding="15">
+                                <Image Source="{Binding Imagem}" 
                             x:Name="MinhaImagem" 
-                            WidthRequest="60"
-                            HeightRequest="80"/>        
-                                <Label Text="{Binding Produto}" 
-                       LineBreakMode="NoWrap" 
-                       Style="{DynamicResource ListItemTextStyle}" 
-                       FontSize="16" />
-                                <Label Text="{Binding Cliente}" 
-                       LineBreakMode="NoWrap"
-                       Style="{DynamicResource ListItemDetailTextStyle}"
-                       FontSize="13" />
-                                <Label Text="{Binding Valor}" 
-                       LineBreakMode="NoWrap"
-                       Style="{DynamicResource ListItemDetailTextStyle}"
-                       FontSize="13" />
+                             WidthRequest="100"
+                             HeightRequest="100"/>
+                                <StackLayout HorizontalOptions="StartAndExpand" >
+                                    <Label Text="{Binding Produto}" 
+                                    LineBreakMode="NoWrap" 
+                                    Style="{DynamicResource ListItemTextStyle}" 
+                                    FontSize="26" />
+                                    <StackLayout Spacing="-3">
+                                        <Label Text="{Binding Cliente}" 
+                                        Style="{DynamicResource ListItemDetailTextStyle}"
+                                        FontSize="13" />
+                                        <Label Text="{Binding Valor}" 
+                                        Style="{DynamicResource ListItemDetailTextStyle}"
+                                        FontSize="14" />
+                                    </StackLayout>
+                                </StackLayout>
+
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

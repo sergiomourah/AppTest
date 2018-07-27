@@ -3,16 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppTest.Views.ItemDetailPage"
              Title="{Binding Title}">
-    <StackLayout Spacing="20" Padding="15">
-        <Label Text="Produto:" FontSize="Medium" />
-        <Label Text="{Binding Pedido.Produto}" FontSize="Small"/>
-        <Label Text="Cliente:" FontSize="Medium" />
-        <Label Text="{Binding Pedido.Cliente}" FontSize="Small"/>
-        <Label Text="Valor:" FontSize="Medium" />
-        <Label Text="{Binding Pedido.Valor}" FontSize="Small"/>
+    <StackLayout Spacing="20" Padding="20">
+        <Label Text="{Binding Pedido.Produto}" 
+                LineBreakMode="NoWrap" 
+                Style="{DynamicResource ListItemTextStyle}" 
+                FontSize="26" />
         <Image Source="{Binding Pedido.Imagem}" 
                x:Name="MinhaImagem" 
-                WidthRequest="400"
-                HeightRequest="220"/>
+                WidthRequest="650"
+                HeightRequest="250"/>
+        <StackLayout Spacing="-3">
+            <Label Text="Cliente:" FontSize="Medium" />
+            <Label Text="{Binding Pedido.Cliente}" FontSize="Small"/>
+            <Label Text="Valor:" FontSize="Medium" />
+            <Label Text="{Binding Pedido.Valor}" FontSize="Small"/>
+        </StackLayout>
     </StackLayout>
 </ContentPage>
