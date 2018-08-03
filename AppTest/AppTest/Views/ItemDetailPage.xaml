@@ -18,5 +18,6 @@
             <Label Text="Valor:" FontSize="Medium" />
             <Label Text="{Binding Pedido.Valor}" FontSize="Small"/>
         </StackLayout>
+        <Button Text="Visualizar Imagens" Clicked="ViewMedia_Clicked" FontSize="20" StyleClass="Info" />
     </StackLayout>
 </ContentPage>

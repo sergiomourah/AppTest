@@ -17,8 +17,12 @@ namespace AppTest.Views {
     public partial class AboutPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::AppTest.WrapLayout wrapLayout;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AboutPage));
+            wrapLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::AppTest.WrapLayout>(this, "wrapLayout");
         }
     }
 }

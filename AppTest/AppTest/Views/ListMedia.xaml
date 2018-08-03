@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppTest"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             x:Class="AppTest.Views.ListMedia">
+    <ContentPage.Content>
+        <ScrollView Margin="0,20,0,20">
+            <local:WrapLayout x:Name="wrapLayout" />
+            <!--<flv:FlowListView FlowColumnCount="3" SeparatorVisibility="None" HasUnevenRows="false"
+	            FlowItemsSource="{Binding viewModel.Pedido.lMedia}" >
+
+                <flv:FlowListView.FlowColumnTemplate>
+                    <DataTemplate>
+                        <Image Source="{Binding getFile}" 
+                            x:Name="MinhaImagem" 
+                                WidthRequest="240"
+                                HeightRequest="240"/>
+                    </DataTemplate>
+                </flv:FlowListView.FlowColumnTemplate>
+
+            </flv:FlowListView>-->
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

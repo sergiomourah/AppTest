@@ -1,39 +1,80 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:local="clr-namespace:AppTest"
              x:Class="AppTest.Views.NewItemPage"
 		     Title="Adicionar Item">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Save" Clicked="Save_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout Spacing="20" Padding="15">
-            <!--Produto-->
-            <Entry x:Name="Produto"
-             Text="{Binding Pedido.Produto}"
-             Placeholder="Produto" 
-             Margin="0"
-             FontSize="20"/>
-            <!--Cliente-->
-            <Entry x:Name="Cliente"
-             Text="{Binding Pedido.Cliente}"
-             Placeholder="Cliente" 
-             Margin="0"
-             FontSize="20"/>
-            <!--Valor-->
-            <Entry x:Name="Valor"
-             Text="{Binding Pedido.Valor}"
-             Placeholder="Valor" 
-             Margin="0"
-             FontSize="20"/>
+        <ScrollView>
+            <StackLayout Spacing="20" Padding="15">
+                <!--Produto-->
+                <Entry x:Name="Produto"
+                 Text="{Binding Pedido.Produto}"
+                 Placeholder="Produto" 
+                 Margin="0"
+                 FontSize="20"/>
+                <!--Cliente-->
+                <Entry x:Name="Cliente"
+                 Text="{Binding Pedido.Cliente}"
+                 Placeholder="Cliente" 
+                 Margin="0"
+                 FontSize="20"/>
+                <!--Valor-->
+                <Entry x:Name="Valor"
+                 Text="{Binding Pedido.Valor}"
+                 Placeholder="Valor" 
+                 Margin="0"
+                 FontSize="20"/>
             
-            <Button Text="Tirar Foto" Clicked="TirarFoto" FontSize="20" StyleClass="Info" />
+                <Button Text="Tirar Foto" Clicked="TirarFoto" FontSize="20" StyleClass="Info" />
 
-            <Button Text="Escolher Foto" Clicked="EscolherFoto" FontSize="20" StyleClass="Info"/>
+                <Button Text="Escolher Foto" Clicked="EscolherFoto" FontSize="20" StyleClass="Info"/>
 
-            <Image x:Name="MinhaImagem" 
-                WidthRequest="400"
-                HeightRequest="220"/>
-        </StackLayout>
+                <Button Text="Gravar Video" Clicked="GravarVideo" FontSize="20"></Button>
+
+                <Button Text="Escolher Video" Clicked="EscolherVideo" FontSize="20"></Button>
+
+                <StackLayout>
+                    <local:VideoPlayer 
+                        x:Name="videoPlayer"                     
+                        Grid.Row="0" />
+                    <ListView x:Name="listView"
+                              ItemsSource="{Binding Pedido.lMedia}"
+                              ItemSelected="OnListViewItemSelected"
+                  Grid.Row="1">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" Padding="15">
+                                        <StackLayout HorizontalOptions="StartAndExpand" >
+                                            <Label Text="{Binding Media._file}" 
+                                    LineBreakMode="NoWrap" 
+                                    Style="{DynamicResource ListItemTextStyle}" 
+                                    FontSize="26" />
+                                        </StackLayout>
+
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+
+                <Image Source="{Binding Pedido.Imagem}" 
+                   x:Name="MinhaImagem" 
+                    WidthRequest="650"
+                    HeightRequest="250"/>
+
+                <StackLayout Margin="0,20,0,20">
+                    <local:WrapLayout 
+                     x:Name="wrapLayout"/>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

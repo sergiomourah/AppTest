@@ -3,6 +3,8 @@ using Xamarin.Forms;
 using AppTest.Views;
 using Xamarin.Forms.Xaml;
 using Plugin.FirebasePushNotification;
+using DLToolkit.Forms.Controls;
+using AppTest.Database;
 
 [assembly: XamlCompilation (XamlCompilationOptions.Compile)]
 namespace AppTest
@@ -39,10 +41,12 @@ namespace AppTest
                 }
 
             };
+            FlowListView.Init();
         }
 
 		protected override void OnStart ()
 		{
+            SQLiteRepository.init();
 			// Handle when your app starts
 		}
 

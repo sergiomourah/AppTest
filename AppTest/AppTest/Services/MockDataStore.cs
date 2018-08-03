@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
-
+using AppTest.Database;
 using AppTest.Models;
 using Firebase.Database;
+using Firebase.Database.Query;
 using Firebase.Database.Streaming;
 using Newtonsoft.Json;
 
@@ -24,61 +25,49 @@ namespace AppTest.Services
         {
             _firebaseClient = new FirebaseClient(ENDERECO_FIREBASE);
             _pedidos = new ObservableCollection<Pedido>();
-            ListenerPedidos();
         }
 
-        private void ListenerPedidos()
+        private async Task<ObservableCollection<Pedido>> ListenerPedidos()
         {
-            _pedidos.Clear();
-            _firebaseClient
-                .Child("pedidos")
-                 .AsObservable<Pedido>()
-                .Subscribe(d =>
-                {
-                    if (d.EventType == FirebaseEventType.InsertOrUpdate)
-                    {
-                        if (d.Object.IdVendedor == 0)
-                            AdicionarPedido(d.Key, d.Object);
-                        else
-                            RemoverPedido(d.Key);
-
-                    }
-                    else if (d.EventType == FirebaseEventType.Delete)
-                    {
-                        RemoverPedido(d.Key);
-                    }
-                });
+            return await SQLiteRepository.query<Pedido>("SELECT * FROM " + typeof(Pedido).Name);
         }
 
-        private void AdicionarPedido(string key, Pedido pedido)
-        {
-            _pedidos.Add(new Pedido()
-            {
-                Id = key,
-                Cliente = pedido.Cliente,
-                Produto = pedido.Produto,
-                Valor = pedido.Valor,
-                img = pedido.img
-            });
-        }
+        //private void AdicionarPedido(Pedido pedido)
+        //{
+        //    _pedidos.Add(new Pedido()
+        //    {
+        //        Id = Convert.ToDecimal(key)l,
+        //        Cliente = pedido.Cliente,
+        //        Produto = pedido.Produto,
+        //        Valor = pedido.Valor,
+        //        img = pedido.img
+        //    });
+        //}
 
         private void RemoverPedido(string pedidoKey)
         {
-            var pedido = _pedidos.FirstOrDefault(x => x.Id == pedidoKey);
-            _pedidos.Remove(pedido);
+            //var pedido = _pedidos.FirstOrDefault(x => x.Id == pedidoKey);
+            //_pedidos.Remove(pedido);
         }
 
-        public async Task<bool> AddItemAsync(Pedido pedido)
+        public async Task<bool> AddPedidoAsync(Pedido pedido)
         {
             _pedidos.Add(pedido);
-            string dataPedido = JsonConvert.SerializeObject(pedido);
-            await  _firebaseClient
-                   .Child("pedidos")
-                   .PostAsync(dataPedido);
+            //string dataPedido = JsonConvert.SerializeObject(pedido);
+
+            SQLiteRepository.inserir<Pedido>(pedido);
+            pedido.lMedia.ToList().ForEach(media =>
+            {
+                media.PedidoId = pedido.Id;
+                SQLiteRepository.inserir<Media>(media);
+            });
             return await Task.FromResult(true);
+            //await _firebaseClient
+            //       .Child("pedidos")
+            //       .PostAsync(dataPedido);
         }
 
-        public async Task<bool> UpdateItemAsync(Pedido pedido)
+        public async Task<bool> UpdatePedidoAsync(Pedido pedido)
         {
             var _pedido = _pedidos.Where((Pedido arg) => arg.Id == pedido.Id).FirstOrDefault();
             _pedidos.Remove(_pedido);
@@ -87,7 +76,7 @@ namespace AppTest.Services
             return await Task.FromResult(true);
         }
 
-        public async Task<bool> DeleteItemAsync(string id)
+        public async Task<bool> DeletePedidoAsync(long? id)
         {
             var _pedido = _pedidos.Where((Pedido arg) => arg.Id == id).FirstOrDefault();
             _pedidos.Remove(_pedido);
@@ -95,14 +84,21 @@ namespace AppTest.Services
             return await Task.FromResult(true);
         }
 
-        public async Task<Pedido> GetItemAsync(string id)
+        public async Task<Pedido> GetPedidoByIdAsync(long? id)
         {
             return await Task.FromResult(_pedidos.FirstOrDefault(s => s.Id == id));
         }
 
-        public ObservableCollection<Pedido> GetItemsAsync(bool forceRefresh = false)
+        public async Task<Pedido> GetPedidoByClienteAsync(string cliente)
         {
-            return _pedidos;
+            return await Task.FromResult(_pedidos.FirstOrDefault(s => s.Cliente == cliente));
+        }
+
+        public async Task<ObservableCollection<Pedido>> GetPedidosAsync(bool forceRefresh = false)
+        {
+            //Buscar Pedidos
+            Task<ObservableCollection<Pedido>> listaPedidos = ListenerPedidos();
+            return await listaPedidos;
         }
     }
 }

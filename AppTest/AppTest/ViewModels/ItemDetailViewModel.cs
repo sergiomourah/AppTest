@@ -9,7 +9,7 @@ namespace AppTest.ViewModels
         public Pedido Pedido { get; set; }
         public ItemDetailViewModel(Pedido pedido = null)
         {
-            Title = pedido?.Id;
+            Title = pedido?.Id.ToString();
             Pedido = pedido;
         }
     }

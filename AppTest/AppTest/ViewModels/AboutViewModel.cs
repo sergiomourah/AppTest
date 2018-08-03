@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppTest.Models;
+using System;
 using System.Windows.Input;
 
 using Xamarin.Forms;
@@ -9,11 +10,7 @@ namespace AppTest.ViewModels
     {
         public AboutViewModel()
         {
-            Title = "About";
-
-            OpenWebCommand = new Command(() => Device.OpenUri(new Uri("https://xamarin.com/platform")));
+            Title = "Galeria";
         }
-
-        public ICommand OpenWebCommand { get; }
     }
 }

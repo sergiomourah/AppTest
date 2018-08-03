@@ -21,12 +21,12 @@
                 Padding="10, 0">
 
                 <StackLayout Padding="10" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center">
-                    <Label Text="Other Reason" />
-                    <Entry />
+                    <Label Text="Filtrar Nome Cliente"/>
+                    <Entry Text="{Binding Filter}" />
 
-                    <StackLayout Orientation="Horizontal">
-                        <Button Text="Cancel" />
-                        <Button Text="Done" />
+                    <StackLayout Orientation="Horizontal" >
+                        <Button Text="Cancel" Clicked="Cancel_Clicked" />
+                        <Button Text="Done" Clicked="Done_Clicked" />
                     </StackLayout>
                 </StackLayout>
             </ContentView>

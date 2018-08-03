@@ -25,5 +25,10 @@ namespace AppTest.Views
             InitializeComponent();
             BindingContext = viewModel;
         }
+
+        private async void ViewMedia_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ListMedia(new ListMediaViewModel(viewModel.Pedido)));
+        }
     }
 }

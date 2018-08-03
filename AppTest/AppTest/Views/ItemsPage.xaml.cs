@@ -51,7 +51,6 @@ namespace AppTest.Views
         {
             base.OnAppearing();
             viewModel.LoadItemsCommand.Execute(null);
-
         }
     }
 }

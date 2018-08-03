@@ -6,12 +6,12 @@ C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\XbdMerge\X
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\XbdMerge\Xamarin.Firebase.Messaging.dll.stamp
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\googsvcsjson\values\goog_svcs_json.xml
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\AppTest.Android.csproj.CoreCompileInputs.cache
-C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\AppTest.Android.dll
-C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\AppTest.Android.pdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\bin\Debug\AppTest.Android.dll
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\bin\Debug\AppTest.Android.pdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\bin\Debug\com.companyname.AppTest.apk
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\bin\Debug\com.companyname.AppTest-Signed.apk
+C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\AppTest.Android.dll
+C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\AppTest.Android.pdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\android\bin\com.companyname.AppTest.apk
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\res\layout\tabbar.xml
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\res\layout\toolbar.xml
@@ -44,6 +44,7 @@ C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\bin\Debug\FFImageLoa
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\bin\Debug\FFImageLoading.Transformations.pdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\bin\Debug\Mono.Android.pdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\bin\Debug\mscorlib.pdb
+C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\bin\Debug\SQLite-net.pdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\bin\Debug\System.Core.pdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\bin\Debug\System.pdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\bin\Debug\System.IO.Compression.pdb
@@ -71,6 +72,7 @@ C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\linksrc\FF
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\linksrc\FFImageLoading.Transformations.pdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\linksrc\Mono.Android.pdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\linksrc\mscorlib.pdb
+C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\linksrc\SQLite-net.pdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\linksrc\System.Core.pdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\linksrc\System.pdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\linksrc\System.IO.Compression.pdb
@@ -115,6 +117,7 @@ C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\android\as
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\android\assets\Mono.Android.pdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\android\assets\Mono.Security.pdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\android\assets\mscorlib.pdb
+C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\android\assets\SQLite-net.pdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\android\assets\System.ComponentModel.Composition.pdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\android\assets\System.Core.pdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\android\assets\System.Data.pdb
@@ -131,6 +134,12 @@ C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\android\as
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\android\assets\System.Xml.pdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\android\assets\Xamarin.Forms.Core.pdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.pdb
+C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\XbdMerge\proguard\dc663e480.txt
+C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\XbdMerge\dc663e48.proguard.stamp
+C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\XbdMerge\0757626b.proguard.stamp
+C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\XbdMerge\1f4fd9cc.proguard.stamp
+C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\XbdMerge\d9f2c52f.proguard.stamp
+C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\XbdMerge\04db0838.proguard.stamp
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\bin\Debug\AppTest.Android.dll
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\linksrc\AppTest.Android.dll.mdb
 C:\Users\sergi\source\repos\AppTest\AppTest\AppTest.Android\obj\Debug\linksrc\FormsViewGroup.dll.mdb

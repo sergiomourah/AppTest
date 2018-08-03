@@ -107,6 +107,7 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "AppTest.Android.dll" comes first in this list. */
 		"AppTest.Android.dll",
+		"DLToolkit.Forms.Controls.FlowListView.dll",
 		"FFImageLoading.dll",
 		"FFImageLoading.Forms.dll",
 		"FFImageLoading.Forms.Platform.dll",
@@ -123,6 +124,14 @@ class MonoPackageManager_Resources {
 		"Plugin.Media.dll",
 		"Plugin.Permissions.dll",
 		"SkiaSharp.dll",
+		"SQLite-net.dll",
+		"SQLite.Net.dll",
+		"SQLite.Net.Platform.XamarinAndroid.dll",
+		"SQLitePCLRaw.batteries_green.dll",
+		"SQLitePCLRaw.batteries_v2.dll",
+		"SQLitePCLRaw.core.dll",
+		"SQLitePCLRaw.lib.e_sqlite3.dll",
+		"SQLitePCLRaw.provider.e_sqlite3.dll",
 		"System.Reactive.Core.dll",
 		"System.Reactive.Interfaces.dll",
 		"System.Reactive.Linq.dll",

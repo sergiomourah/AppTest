@@ -46,8 +46,7 @@ namespace AppTest.Views
                 {
                     SaveToAlbum = true,
                     Directory = "Demo",
-                    CompressionQuality = 30
-
+                    CompressionQuality = 20
                 });
 
             if (file == null)
@@ -61,6 +60,16 @@ namespace AppTest.Views
                 var stream = file.GetStream();
                 file.Dispose();
                 return stream;
+
+            });
+
+            Pedido.lMedia.Add(new Media()
+            {
+                Id = GetHashCode(),
+                Descricao = file.Path,
+                TipoMedia = TipoMedia.IMAGEM,
+                _file = Convert.ToBase64String(byteArray),
+                PedidoId = Pedido.Id
             });
         }
 
@@ -90,6 +99,73 @@ namespace AppTest.Views
                 return stream;
 
             });
+
+            Pedido.lMedia.Add(new Media()
+            {
+                Id = GetHashCode(),
+                Descricao = file.Path,
+                TipoMedia = TipoMedia.IMAGEM,
+                _file = Convert.ToBase64String(byteArray),
+                PedidoId = Pedido.Id
+            });
+        }
+
+        private async void GravarVideo(object sender, EventArgs e)
+        {
+            await CrossMedia.Current.Initialize();
+
+            if (!CrossMedia.Current.IsTakeVideoSupported || !CrossMedia.Current.IsCameraAvailable)
+            {
+                await DisplayAlert("Ops", "Nenhuma câmera detectada.", "OK");
+
+                return;
+            }
+
+            var file = await CrossMedia.Current.TakeVideoAsync(
+                new StoreVideoOptions
+                {
+                    SaveToAlbum = true,
+                    Directory = "Demo",
+                    Quality = VideoQuality.Medium
+                });
+
+            if (file == null)
+                return;
+
+            Pedido.lMedia.Add(new Media()
+            {
+                Id = GetHashCode(),
+                Descricao = file.Path,
+                TipoMedia = TipoMedia.VIDEO,
+                _file = file.Path,
+                PedidoId = Pedido.Id
+            });
+        }
+
+        private async void EscolherVideo(object sender, EventArgs e)
+        {
+            await CrossMedia.Current.Initialize();
+
+            if (!CrossMedia.Current.IsPickVideoSupported)
+            {
+                await DisplayAlert("Ops", "Galeria de videos não suportada.", "OK");
+
+                return;
+            }
+
+            var file = await CrossMedia.Current.PickVideoAsync();
+
+            if (file == null)
+                return;
+
+            Pedido.lMedia.Add(new Media()
+            {
+                Id = GetHashCode(),
+                Descricao = file.Path,
+                TipoMedia = TipoMedia.VIDEO,
+                _file = file.Path,
+                PedidoId = Pedido.Id
+            });
         }
 
         public static string StreamToString(Stream stream)
@@ -98,6 +174,17 @@ namespace AppTest.Views
             using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
             {
                 return reader.ReadToEnd();
+            }
+        }
+
+        private void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs args)
+        {
+            if (args.SelectedItem != null)
+            {
+                var media = args.SelectedItem as Media;
+                byte[] baseVideo = System.IO.File.ReadAllBytes(media._file);
+                string video = Convert.ToBase64String(baseVideo);
+                videoPlayer.Source = (UriVideoSource)Application.Current.Resources[media._file];
             }
         }
     }

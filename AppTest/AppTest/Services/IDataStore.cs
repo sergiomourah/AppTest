@@ -7,10 +7,11 @@ namespace AppTest.Services
 {
     public interface IDataStore<T>
     {
-        Task<bool> AddItemAsync(T item);
-        Task<bool> UpdateItemAsync(T item);
-        Task<bool> DeleteItemAsync(string id);
-        Task<T> GetItemAsync(string id);
-        ObservableCollection<T> GetItemsAsync(bool forceRefresh = false);
+        Task<bool> AddPedidoAsync(T item);
+        Task<bool> UpdatePedidoAsync(T item);
+        Task<bool> DeletePedidoAsync(long? id);
+        Task<T> GetPedidoByIdAsync(long? id);
+        Task<T> GetPedidoByClienteAsync(string cliente);
+        Task<ObservableCollection<T>> GetPedidosAsync(bool forceRefresh = false);
     }
 }

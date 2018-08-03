@@ -7,6 +7,8 @@ using Xamarin.Forms;
 
 using AppTest.Models;
 using AppTest.Views;
+using AppTest.Database;
+using System.Collections.Generic;
 
 namespace AppTest.ViewModels
 {
@@ -19,6 +21,7 @@ namespace AppTest.ViewModels
             get { return _pedidos; }
             set { _pedidos = value; OnPropertyChanged(); }
         }
+
         public Command LoadItemsCommand { get; set; }
         public Command DialogSearchItem { get; set; }
 
@@ -26,22 +29,28 @@ namespace AppTest.ViewModels
         {
             Title = "Consulta Pedidos";
             _pedidos = new ObservableCollection<Pedido>();
-            LoadItemsCommand = new Command(() => ExecuteLoadItemsCommand());
+            LoadItemsCommand = new Command( async() => ExecuteLoadItemsCommand());
 
             MessagingCenter.Subscribe<NewItemPage, Pedido>(this, "AddItem", (obj, item) =>
             {
                 var _item = item as Pedido;
                 _pedidos.Add(_item);
-                DataStore.AddItemAsync(_item);
+                DataStore.AddPedidoAsync(_item);
+            });
+
+            MessagingCenter.Subscribe<DialogSearchItemPage, string>(this, "SearchItem", (obj, cliente) =>
+            {
+                var _cliente = cliente.ToString();
+                DataStore.GetPedidoByClienteAsync(_cliente);
             });
         }
 
-        private void ExecuteLoadItemsCommand()
+        private async void ExecuteLoadItemsCommand()
         {
             try
             {
                 _pedidos.Clear();
-                ObservableCollection<Pedido> items = DataStore.GetItemsAsync(true);
+                ObservableCollection<Pedido> items = await DataStore.GetPedidosAsync(true);
                 foreach (var item in items)
                 {
                     _pedidos.Add(item);
